@@ -1,0 +1,25 @@
+/* bugSolution.css */
+
+/* Correcting unit incompatibility */
+.element {
+  width: calc(100% - 20px);
+  /* Correct: Subtracting pixels from a percentage is valid */
+}
+
+/* Correcting order of operations */
+.element {
+  width: calc((100% - 20px) / 2);
+  /* Correct: Uses parentheses to enforce intended calculation order */
+}
+
+/* Handling potential browser compatibility issues */
+.element {
+  width: calc(100% - 20px);
+  /* For older browsers, provide a fallback width */
+  width: 90%; /* Fallback width for older browsers */
+}
+
+/* Avoid complex calculations for better cross-browser compatibility*/
+.element {
+  width: 80%; /* Simpler, easier to understand calculation */
+}
